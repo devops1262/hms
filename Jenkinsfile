@@ -13,6 +13,7 @@ pipeline {
             steps {
                 echo 'BUILD'
                 sh 'hostname'
+		 sh 'pwd'
 				echo '*****************'
             }
         }
