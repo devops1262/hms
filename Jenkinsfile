@@ -4,18 +4,21 @@ pipeline {
         pollSCM '* * * * *'
     }
     stages {
-        stage('SCM') {
+        stage('build') {
             steps {
-                git branch: 'master', credentialsId: 'aml-github', url: 'https://github.com/devops1262/hms.git'
+               echo 'build stage excuted'
             }
         }
-        stage('Build') {
+        stage('depoly') {
             steps {
-                echo 'BUILD'
+                echo 'depolyment has been compilited'
                 sh 'hostname'
-		 sh 'pwd'
-				echo '*****************'
             }
         }
+	stage('report') {
+            steps {
+                echo 'report has been uploaded'
+            }
+        }   
     }
 }
