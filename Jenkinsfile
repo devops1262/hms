@@ -20,9 +20,10 @@ pipeline {
                     "https://anrdevops99.jfrog.io/artifactory/aml/"'
             }
         }
-	stage('report') {
+	stage('Deploy') {
             steps {
-                echo 'report has been uploaded'
+                echo 'DeployArtifactoryIntoDevEnvernment'
+		sh 'amldeploy.sh'
             }
         }   
     }
