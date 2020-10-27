@@ -23,7 +23,7 @@ pipeline {
 	stage('Deploy') {
             steps {
                 echo 'DeployArtifactoryIntoDevEnvernment'
-		sh 'amldeploy.sh'
+		sh './amldeploy.sh'
             }
         }   
     }
